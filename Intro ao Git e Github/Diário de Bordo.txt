@@ -1,0 +1,37 @@
+08/01/2022 - Início do aprendizado
+
+Git
+  	Linus Torvalds - 2005
+	Sistema de Versionamento de Códigos Distribuído
+	Ajuda a criar e monitorar diferentes versões do código
+
+Funcionamento Git
+	SHA1 - Algorítimo de Hash Seguro
+	     - Conjunto de Funções Hash criptográficas projetadas pela NSA
+	     - Cria um Identificador alfanumérico com 40 caracteres
+
+Objetos Internos Git (Contém Metadados)
+	Blobs -	(Bolha/Primário-básico)					
+	Trees -	(Árvore) 	 - Armazena Blobs e/ou "outras" Árvores 
+	Commits	(Confirma/Reúne) - Junta tudo dando sentido a operação (autor/msg)
+
+Estrutura 
+Blob  -	Tipo: "Blob"
+	Tamanho: "x"
+	"\0"
+	Conteúdo: "texto, binário, etc..."
+
+Tree  -	Tipo: "Tree"
+	Tamanho: "x"
+	"\0"
+	Aponta: "Blob e/ou 'outras' Árvores"
+	SHA1: Identificador (40 caracteres)
+	Nome do Arquivo: "name"
+
+Commit- Tipo: "Commit"
+	Tamanho: "x"
+	Aponta: "Árvore" e "Parente - último commit realizado antes dele"
+	Autor: "name"
+	Mensagem: "msg"
+	Timestamp: "Data/Hora da criação" - Carimbo de Tempo
+	
